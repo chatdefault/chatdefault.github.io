@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Newsletter Abmeldung</title>
+    <style>
+      /* Hintergrundfarbe der Seite */
+      body {
+        background-color: lightgray;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+      }
+      /* Farbe und Position des weißen Fensters */
+      .center-box {
+        background-color: white;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+      }
+      /* Farbe der Schrift im weißen Fenster */
+      .center-box p {
+        color: darkgray;
+      }
+      /* Style des Abmelde-Buttons */
+      button {
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+      }
+      /* Style des Titels */
+      h1 {
+        color: black;
+        font-size: 2rem;
+      }
+      /* Style des Bildes */
+      img {
+        display: none;
+        width: 100px;
+        height: 100px;
+      }
+      /* Style für erfolgreiche Abmeldung */
+      .success {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Newsletter Abmeldung</h1>
+        <div class="center-box">
+        <p id="message">Klicke den Button um dich von unserem Newsletter abzumelden.</p>
+    </div>
+    <br>
+    <center>
+      <button id="unsubscribe-button" onclick="unsubscribe()">Abmelden</button>
+      <img id="success-img" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099_960_720.png" alt="Erfolgreich abgemeldet">
+    </center>
+    <script>
+      function unsubscribe() {
+        document.getElementById("message").innerHTML = "<p class='success'>Sie haben sich erfolgreich von unserem Newsletter abgemeldet.</p><p>Wir bedauern, dass Sie kein Teil mehr unserer Community sein möchten und hoffen Sie bald wiederzusehen!</p>";
+        document.getElementById("unsubscribe-button").style.display = "none";
+        document.getElementById("success-img").style.display = "inline-block";
+      }
+    </script>
+  </body>
+</html>
